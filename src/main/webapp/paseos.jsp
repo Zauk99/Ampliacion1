@@ -3,21 +3,25 @@
 
 <%
 String usuario = "";
-try {
-    // Control de sesión
+try { 
+    //AQUI VA EL CONTROL DE SESION
     usuario = session.getAttribute("attributo2").toString();
     String acceso = session.getAttribute("attributo1").toString();
-    if (!acceso.equals("1") && !acceso.equals("2")) {
+
+    // Comprobamos si el acceso (id del usuario) es menor que 1
+    if (!acceso.equals("1")) {
         response.sendRedirect("nouser.jsp");
     }
 } catch (Exception e) {
+    // Si ocurre cualquier excepción, redirigir al usuario a la página 'nouser.jsp'
     response.sendRedirect("nouser.jsp");
 }
 
+
 // Variables de conexión
-	String url = "jdbc:mysql://localhost:3306/db?serverTimezone=UTC";
-    String usuarioDB = "usu";
-    String passwordDB = "pass";
+	String url = "jdbc:mysql://localhost:3306/PassingDogs?serverTimezone=UTC";
+		String usuarioDB = "iwuegfuewbf";
+		String passwordDB = "oihuwhgfuwhfushfshf8w";
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;

@@ -16,9 +16,9 @@ public class beanDB {
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
 			cn = DriverManager.getConnection(
-				    "jdbc:mysql://localhost:3306/db?serverTimezone=UTC",
-				    "usu",
-				    "pass"
+				    "jdbc:mysql://51.120.14.196/PassingDogs?serverTimezone=UTC",
+				    "zauk",
+				    "Avg_1954@"
 				);
 
 		}
